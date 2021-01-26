@@ -1,4 +1,5 @@
 import { Component, OnInit , EventEmitter, Output} from '@angular/core';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'post-create',
@@ -8,8 +9,7 @@ import { Component, OnInit , EventEmitter, Output} from '@angular/core';
 export class PostCreateComponent implements OnInit {
   ngModelTitle = ''
   ngModelContent = ''
-  @Output() postCreated = new EventEmitter()
-
+  @Output() postCreated = new EventEmitter<Post>()
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class PostCreateComponent implements OnInit {
   }
 
   onSubmitForm(){
-    const post = {
+    const post:Post = {
       title:this.ngModelTitle,
       content: this.ngModelContent,
     }
