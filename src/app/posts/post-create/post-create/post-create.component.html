@@ -1,7 +1,9 @@
-
-  <label>Name: </label>
-
-  <input matInput type="text" [(ngModel)]="ngModelValue"><br><br>
-  <button (click)="onSubmitForm('postInput')">SUBMIT</button>
-
-  <p>{{ngModelValue}}</p>
+  <mat-card>
+    <mat-form-field>
+      <input matInput type="text" [(ngModel)]="ngModelValue"><br><br>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color='primary'
+      (click)="onSubmitForm('postInput')">SUBMIT</button>
+  </mat-card>
