@@ -1,10 +1,13 @@
   <mat-card>
     <mat-form-field>
-      <input matInput type="text" [(ngModel)]="ngModelValue"><br><br>
+      <input matInput type="text" [(ngModel)]="ngModelTitle">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput type="text" [(ngModel)]="ngModelContent"></textarea>
       <mat-hint>Errors appear instantly!</mat-hint>
     </mat-form-field>
     <button
       mat-raised-button
       color='primary'
-      (click)="onSubmitForm('postInput')">SUBMIT</button>
+      (click)="onSubmitForm()">SUBMIT</button>
   </mat-card>

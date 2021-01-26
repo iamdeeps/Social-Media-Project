@@ -1,6 +1,6 @@
 <app-header></app-header>
 <br>
 <main>
-  <post-create></post-create>
-  <post-list></post-list>
+  <post-create (postCreated)='onPostAdded($event)'></post-create>
+  <post-list [posts]='storePosts'></post-list>
 </main>
