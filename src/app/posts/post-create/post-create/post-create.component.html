@@ -1,6 +1,7 @@
 
   <label>Name: </label>
-  <input type="text" [value]='newPost'><br><br>
-  <button (click)="onSubmitForm('click')">SUBMIT</button>
 
-  <p>{{newPost}}</p>
+  <input matInput type="text" [(ngModel)]="ngModelValue"><br><br>
+  <button (click)="onSubmitForm('postInput')">SUBMIT</button>
+
+  <p>{{ngModelValue}}</p>

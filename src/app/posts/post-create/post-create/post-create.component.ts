@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCreateComponent implements OnInit {
   newPost = ''
+  ngModelValue = ''
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmitForm(event){
-    this.newPost = event
+    this.newPost = this.ngModelValue
   }
 
 }
