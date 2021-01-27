@@ -1,16 +1,17 @@
 import { Component, OnInit , EventEmitter, Output} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Post } from '../../models/post.model';
+import { PostsService } from '../../services/posts.service'
 
 @Component({
   selector: 'post-create',
   templateUrl: './post-create.component.html',
   styleUrls: ['./post-create.component.css']
 })
-export class PostCreateComponent implements OnInit {\
+export class PostCreateComponent implements OnInit {
   @Output() postCreated = new EventEmitter<Post>()
 
-  constructor() { }
+  constructor(public postsService:PostsService) { }
 
   ngOnInit(): void {
   }
